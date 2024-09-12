@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="contact.css">
+
+
+<script>
+    function toggleMenu() {
+      const navLinks = document.querySelector('.nav-links');
+      navLinks.classList.toggle('active');
+    }
+  </script>
+  </head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+          <a href="#">Eco-Quest</a>
+        </div>
+        <ul class="nav-links">
+          <li><a href="/index.html">Home</a></li>
+          <li><a href="/About/about.html">About</a></li>
+          <li class="dropdown">
+            <a href="#" class="dropbtn">Services</a>
+            <div class="dropdown-content">
+              <a href="#">Web Design</a>
+              <a href="#">Development</a>
+              <a href="#">SEO</a>
+            </div>
+          </li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="/Contact Us/contact.html">Contact</a></li>
+        </ul>
+        <div class="mobile-menu-icon" onclick="toggleMenu()">
+            <span>&#9776;</span>
+          </div>
+      </nav>
+
+   <!-- Contact Us Section -->
+<section class="contact-section" id="contact">
+    <div class="container">
+        <div class="contact-info">
+            <h2>Contact Us</h2>
+            <p>Have questions or need assistance? Feel free to reach out!</p>
+            <div class="contact-details">
+                <p><strong>Address:</strong> Roundabot Street, Malindi, Kenya</p>
+                <p><strong>Email:</strong> catherineimali60@gmail.com</p>
+                <p><strong>Phone:</strong> +254 717008691</p>
+            </div>
+            <!-- Map -->
+            <div class="map-container">
+                <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3983.520478848278!2d40.112294770045196!3d-3.219690133598906!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x18158fbb726737e1%3A0x6dddd660ca22d5c1!2sMalindi%20Round%20About!5e0!3m2!1sen!2ske!4v1726062792867!5m2!1sen!2ske"
+                    width="100%" 
+                    height="300" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+        </div>
+
+        <div class="contact-form">
+            <form action="#" method="POST" id="contact-form">
+                <div class="input-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="input-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="input-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="btn submit-btn">Send Message</button>
+            </form>
+        </div>
+    </div>
+</section>
+
+<!-- Footer Section -->
+<footer class="footer-section">
+    <div class="container">
+        <div class="footer-columns">
+            <!-- About Us Column -->
+            <div class="footer-column">
+                <h3>About Us</h3>
+                <p>We are a leading company in real estate, tech, and education, committed to offering quality services and empowering individuals across Kenya.</p>
+            </div>
+
+            <!-- Quick Links Column -->
+            <div class="footer-column">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="/About/about.html">About</a></li>
+                    <li><a href="/Contact Us/contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+
+            <!-- Contact Info Column -->
+            <div class="footer-column">
+                <h3>Contact Info</h3>
+                <p><strong>Address:</strong> 123 Main Street, Nairobi, Kenya</p>
+                <p><strong>Email:</strong> contact@example.com</p>
+                <p><strong>Phone:</strong> +254 700 000 000</p>
+            </div>
+
+            <!-- Social Media Column -->
+            <div class="footer-column">
+                <h3>Follow Us</h3>
+                <div class="social-icons">
+                    <a href="#"><img src="facebook-icon.png" alt="Facebook"></a>
+                    <a href="#"><img src="twitter-icon.png" alt="Twitter"></a>
+                    <a href="#"><img src="instagram-icon.png" alt="Instagram"></a>
+                    <a href="#"><img src="linkedin-icon.png" alt="LinkedIn"></a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Copyright -->
+        <div class="footer-bottom">
+            <p>&copy; 2024 Eco-Quest Ventures. All Rights Reserved.</p>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>
