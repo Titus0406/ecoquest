@@ -1,80 +1,148 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<link rel="stylesheet" href="style.css">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>EcoQuest Adventures</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoQuest Adventures | Home</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <script>
+        function toggleMenu() {
+          const navLinks = document.querySelector('.nav-links');
+          navLinks.classList.toggle('active');
+        }
+      </script>
 </head>
-<body>
-    <div class="heading">
-        <div><iframe src="https://d1csarkz8obe9u.cloudfront.net/index.php/posterbuilder/view/2273e229fe72b1faefb175f148a134e1/1" style="height: 800px; width:100%; border:none;"></iframe></div>
-        <h1>EcoQuest Adventures</h1>
-        <h3>Learn. Explore. Protect</h3>
-    </div>
-
-    <nav>
-        <ul>
-            <li> <a href="index.html">Home</a></li>
-            <li class="eco"> <a href="#">Eco Quests</a></li>
-            <ul class="fun">
-                <li>challenges</li>
-                <li>competitions</li>
-            </ul>
-
-            <li> <a href="About/about.html">About</a></li>
-        
-            <li> <a href="index.html">Eco Games</a></li>
-            <li> <a href="index.html">Eco Library</a></li>
-            <li> <a href="index.html">Community</a></li>
-            <li> <a href="/Contact Us/contact.html">Contact Us</a></li>
-            <button>Sign-in</button>
+<body> 
+    <nav class="navbar">
+        <div class="logo">
+          <a href="#">Eco-Quest</a>
+        </div>
+        <ul class="nav-links">
+          <li><a href="/index.html">Home</a></li>
+          <li><a href="/About/about.html">About</a></li>
+          <li class="dropdown">
+            <a href="#" class="dropbtn">Services</a>
+            <div class="dropdown-content">
+            <a href="#">Eco-Quests</a>
+            <a href="#">Eco Games</a>            
+            <a href="#">Eco Library</a>
+            </div>
+          </li>
+          <li><a href="#">Community</a></li>
+          <li><a href="/Contact Us/contact.html">Contact</a></li>
         </ul>
-    </nav>
+        <div class="mobile-menu-icon" onclick="toggleMenu()">
+            <span>&#9776;</span>
+          </div>
+      </nav>
 
-    <div class="hero">
-        <h1>Welcome to EcoQuest Adventures</h1>
-        <h3>Join exciting adventures to learn about the protection and conservation of our planet.</h3>
-        
-    </div>
-
-   <div class="our-info">
-    <section class="about">
-        <h2>About Us</h2>
-        <p><b style="color: #ffc107;">EcoQuest Adventures</b> is designed to educate children about environmental conservation through enganging online and offline activities. The platform compines story-based learning gamified modules and handson experiences to create a copmrehensive and immersive educational environment</p>
-    </section>
-
-    <section class="about-us">
-        <div class="mission">
-            <h2>Our Mission</h2>
-            <p>EcoQuest Adventures aims to inspire and educate children about environmental conservation through enganging and interractive experiences. Our mission is to cultivate a generation of environmental counsious individuals who are passionate about protecting and preserving our planet.</p>
-         </div>
-        <div class="vision">
-            <h2>Our Vision</h2>
-            <p>
-            To create a world where every child is empowered with the knowledge, skills and moltivation to be a steward of environment, leading to a sustainable and thriving planet for future generations.
-            </p>
+    <header class="hero">
+        <video autoplay muted loop id="background-video">
+            <source src="/images/forest.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="hero-overlay">
+            <div class="hero-content">
+                <h1>Join the Movement for a Greener Future</h1>
+                <p>Discover how you can contribute to protecting our environment.</p>
+                <a href="#learn-more" class="btn">Learn More</a>
+            </div>
+        </div>
+    </header>
+    
+    <section id="learn-more">
+        <div class="container">
+            <h2>Why It Matters</h2>
+            <div class="grid">
+                <div class="card">
+                    <img src="/images/clean energy.jpg" alt="Clean Energy">
+                    <h3>Clean Energy</h3>
+                    <p>Transitioning to renewable energy sources can significantly reduce our carbon footprint.</p>
+                </div>
+                <div class="card">
+                    <img src="/images/wildlife.jpg" alt="Wildlife Conservation">
+                    <h3>Wildlife Conservation</h3>
+                    <p>Protecting endangered species and their habitats is crucial for biodiversity.</p>
+                </div>
+                <div class="card">
+                    <img src="/images/sustainable living.jpg" alt="Sustainable Living">
+                    <h3>Sustainable Living</h3>
+                    <p>Adopting eco-friendly practices in daily life can lead to a more sustainable future.</p>
+                </div>
+            </div>
         </div>
     </section>
-   </div>
 
-   <div class="news">
-    <h1>Welcome to Our News and Events</h1>
-    <h3>Join exciting adventures to learn about the protection and conservation of our planet.</h3>
-    <button>More Info</button>
-</div>
-
-<!-- 
-   news and events
-   testimonials
-   team
-   newslater
- -->
-
-</body>
-
+    <section id="get-involved">
+        <div class="container">
+            <h2>Get Involved</h2>
+            <div class="involvement-options">
+                <div class="option">
+                    <img src="/images/volunteer.jpg" alt="Volunteer">
+                    <h3>Volunteer</h3>
+                    <p>Sign up to volunteer at local events, clean-ups, and educational programs.</p>
+                    <a href="#" class="btn">Sign Up</a>
+                </div>
+                <div class="option">
+                    <img src="/images/donations.jpg" alt="Donate">
+                    <h3>Donate</h3>
+                    <p>Your donations help fund conservation projects and initiatives.</p>
+                    <a href="#" class="btn">Donate Now</a>
+                </div>
+                <div class="option">
+                    <img src="/images/events.jpg" alt="Events">
+                    <h3>Events</h3>
+                    <p>Participate in or organize events to spread awareness and drive action.</p>
+                    <a href="#" class="btn">Find Events</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Current Projects Section -->
+<section class="projects">
+    <div class="container">
+      <h2>Current Projects</h2>
+  
+      <div class="projects-grid">
+        
+        <!-- Project 1 -->
+        <div class="project-card">
+          <img src="/images/restoration.jpg" alt="Reforestation" class="project-img">
+          <div class="project-info">
+            <h3>Reforestation Efforts</h3>
+            <p>Our tree-planting initiatives aim to restore forests and combat deforestation, protecting the lungs of our planet.</p>
+            <a href="#" class="button">Learn More</a>
+          </div>
+        </div>
+  
+        <!-- Project 2 -->
+        <div class="project-card">
+          <img src="/images/beach cleanup.jpg" alt="Ocean Cleanup" class="project-img">
+          <div class="project-info">
+            <h3>Ocean Cleanup</h3>
+            <p>We are removing plastic waste from the oceans and safeguarding marine ecosystems for future generations.</p>
+            <a href="#" class="button">Join Us</a>
+          </div>
+        </div>
+  
+        <!-- Project 3 -->
+        <div class="project-card">
+          <img src="/images/environmental education.jpg" alt="Environmental Education" class="project-img">
+          <div class="project-info">
+            <h3>Environmental Education</h3>
+            <p>We empower communities with workshops and educational programs that promote sustainable living practices.</p>
+            <a href="#" class="button">Get Involved</a>
+          </div>
+        </div>
+  
+      </div>
+    </div>
+  </section>
+  
+    
     <footer>
-        <p> <b>&copy; 2024 EcoQuest Adventures. All rights reserved.</b></p>
+        <p>&copy; 2024 Eco-Quest Adventures. All rights reserved.</p>
     </footer>
-
+</body>
 </html>
