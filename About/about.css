@@ -30,12 +30,7 @@ h1 {
     margin-bottom: 20px;
   }
   
-  p {
-    font-size: 18px;
-    color: #666;
-    line-height: 1.8;
-    margin-bottom: 40px;
-  }
+ 
 
 /* Nav default styling */
   
@@ -44,11 +39,17 @@ h1 {
   justify-content: space-between;
   align-items: center;
   padding: 15px 20px;
-  background-color: #008cff;
+  background-color: transparent;
   position: fixed;
   top: 0;
+  left: 0;
+  right: 0;
   width: 100%;
   z-index: 1000;
+  transition: background-color 0.3s ease;
+}
+.navbar.scrolled {
+  background-color: #008cff; /* Color when scrolled */
 }
 
 .logo a {
@@ -76,7 +77,7 @@ h1 {
 }
 
 .nav-links li a:hover {
-  color: #00aaff;
+  color: #fbff00;
 }
 
 /* Dropdown menu */
@@ -104,6 +105,7 @@ h1 {
 
 .dropdown-content a:hover {
   background-color: #008cff;
+  color: #000449;
 }
 
 .dropdown:hover .dropdown-content {
@@ -453,7 +455,7 @@ h1 {
   
 /* Footer Section Styles */
 .footer-section {
-  background-color: var(--primary-green);
+  background: linear-gradient(rgb(0, 29, 0), rgb(0, 0, 0));
   color: var(--white);
   padding: 20px;
   margin-top: 0px;
@@ -464,6 +466,7 @@ h1 {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    gap: 20px;
 }
 
 .footer-column {
@@ -481,6 +484,7 @@ h1 {
     font-size: 0.95rem;
     line-height: 1.6;
     color: #ccc;
+    margin-bottom: 20px;
 }
 
 .footer-column ul {
@@ -499,7 +503,7 @@ h1 {
 }
 
 .footer-column ul li a:hover {
-    color: #ff6b6b;
+    color: #008cff;
 }
 
 /* Social Media Icons */
@@ -511,12 +515,11 @@ h1 {
 .social-icons img {
     width: 30px;
     height: 30px;
-    filter: invert(100%);
     transition: transform 0.3s ease;
 }
 
 .social-icons a:hover img {
-    transform: scale(1.1);
+    transform: scale(1.4);
 }
 
 /* Footer Bottom */
@@ -536,11 +539,37 @@ h1 {
 @media (max-width: 768px) {
     .footer-columns {
         flex-direction: column;
+        gap: 0;
     }
 
     .footer-column {
         flex: 1 1 100%;
-        margin-bottom: 30px;
+        margin-bottom: 10px;
     }
+}
+/* Style for Back to Top Button */
+#backToTopBtn {
+  display: block; /* Hidden by default */
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 100;
+  border: none;
+  outline: none;
+  background-color: transparent; /* No background since it's an image */
+  padding: 0;
+  cursor: pointer;
+}
+.backToTopBtn.scrolled{
+  display: block;
+}
+#backToTopBtn img {
+  width: 40px; /* Adjust the size of the image */
+  height: 40px; /* Adjust the size of the image */
+  transition: transform 0.3s ease;
+}
+
+#backToTopBtn:hover img {
+  transform: scale(1.1); /* Slight zoom effect on hover */
 }
 

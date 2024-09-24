@@ -5,37 +5,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EcoQuest Adventures | Home</title>
     <link rel="stylesheet" href="styles.css">
-
-    <script>
-        function toggleMenu() {
-          const navLinks = document.querySelector('.nav-links');
-          navLinks.classList.toggle('active');
-        }
-      </script>
+    <script src="index.js"></script>
 </head>
 <body> 
-    <nav class="navbar">
-        <div class="logo">
-          <a href="#">Eco-Quest</a>
+  <nav class="navbar">
+    <div class="logo">
+      <a href="#">Eco-Quest</a>
+    </div>
+    <ul class="nav-links">
+      <li><a href="/index.html">Home</a></li>
+      <li><a href="/About/about.html">About</a></li>
+      <li class="dropdown">
+        <a href="#" class="dropbtn">Services</a>
+        <div class="dropdown-content">
+        <a href="#">Eco-Quests</a>
+        <a href="#">Eco Games</a>            
+        <a href="#">Eco Library</a>
         </div>
-        <ul class="nav-links">
-          <li><a href="/index.html">Home</a></li>
-          <li><a href="/About/about.html">About</a></li>
-          <li class="dropdown">
-            <a href="#" class="dropbtn">Services</a>
-            <div class="dropdown-content">
-            <a href="#">Eco-Quests</a>
-            <a href="#">Eco Games</a>            
-            <a href="#">Eco Library</a>
-            </div>
-          </li>
-          <li><a href="#">Community</a></li>
-          <li><a href="/Contact Us/contact.html">Contact</a></li>
-        </ul>
-        <div class="mobile-menu-icon" onclick="toggleMenu()">
-            <span>&#9776;</span>
-          </div>
-      </nav>
+      </li>
+      <li><a href="#">Community</a></li>
+      <li><a href="/Contact Us/contact.html">Contact</a></li>
+    </ul>
+    <div class="mobile-menu-icon" onclick="toggleMenu()">
+        <span>&#9776;</span>
+      </div>
+  </nav>
 
     <header class="hero">
         <video autoplay muted loop id="background-video">
@@ -139,10 +133,69 @@
       </div>
     </div>
   </section>
-  
-    
-    <footer>
-        <p>&copy; 2024 Eco-Quest Adventures. All rights reserved.</p>
-    </footer>
+
+      <!-- Footer Section -->
+<footer class="footer-section">
+  <div class="container">
+      <div class="footer-columns">
+          <!-- About Us Column -->
+          <div class="footer-column">
+              <h3>About Us</h3>
+              <p> We are dedicated to protecting the planet and fostering a sustainable future for all. We believe that every individual has a role to play in safeguarding the environment, and together, we can make a lasting impact.
+
+              </p>
+          </div>
+
+          <!-- Quick Links Column -->
+          <div class="footer-column">
+              <h3>Quick Links</h3>
+              <ul>
+                  <li><a href="/index.html">Home</a></li>
+                  <li><a href="/Community/index.html">Services</a></li>
+                  <li><a href="/About/about.html">About</a></li>
+                  <li><a href="/Contact Us/contact.html">Contact Us</a></li>
+              </ul>
+          </div>
+
+          <!-- Contact Info Column -->
+          <div class="footer-column">
+              <h3>Contact Info</h3>
+              <p><strong>Address:</strong> Roundabot Street, Malindi, Kenya</p>
+              <p><strong>Email:</strong> Eco-QuestVentures@gmail.com</p>
+              <p><strong>Phone:</strong> +254 717008691</p>
+          </div>
+
+          <!-- Social Media Column -->
+          <div class="footer-column">
+              <h3>Follow Us</h3>
+              <div class="social-icons">
+                  <a href="#"><img src="/images/facebook.png" alt="Facebook"></a>
+                  <a href="#"><img src="/images/twiteer.png" alt="Twitter"></a>
+                  <a href="#"><img src="/images/instagram.png" alt="Instagram"></a>
+                  <a href="#"><img src="/images/whatsapp.png" alt="Whatsapp"></a>
+                  <a href="#"><img src="/images/pintest.png" alt="Pintest"></a>
+                  <a href="#"><img src="/images/linkedin.png" alt="LinkedIn"></a>
+
+              </div>
+          </div>
+      </div>
+
+      <!-- Copyright -->
+      <div class="footer-bottom">
+          <p>&copy; 2024 Eco-Quest Ventures. All Rights Reserved.</p>
+      </div>
+  </div>
+</footer>
+<!-- Back to Top Button (Image) -->
+<button 
+onclick="topFunction()" 
+id="backToTopBtn" 
+title="Go to top">
+  <img 
+  src="/images/top.png" 
+  alt="Go to top" 
+  id="backToTopImage" />
+</button>
+
 </body>
 </html>

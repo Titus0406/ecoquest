@@ -10,122 +10,130 @@ body, h1, h2, p {
     box-sizing: border-box;
 }
 
-body {
+body, html {
     font-family: Arial, sans-serif;
     color: #333;
     line-height: 1.6;
+    scroll-behavior: smooth;
 }
+
 
 
 /* Nav default styling */
   
 .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-    background-color: #333;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 1000;
-  }
-  
-  .logo a {
-    color: white;
-    text-decoration: none;
-    font-size: 24px;
-    font-weight: bold;
-  }
-  
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  background-color: transparent;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 1000;
+  transition: background-color 0.3s ease;
+}
+.navbar.scrolled {
+  background-color: #008cff; /* Color when scrolled */
+}
+
+.logo a {
+  color: white;
+  text-decoration: none;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-links li {
+  margin-left: 20px;
+}
+
+.nav-links li a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.nav-links li a:hover {
+  color: #fbff00;
+}
+
+/* Dropdown menu */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #333;
+  min-width: 160px;
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: white;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  border-bottom: 1px solid hsl(0, 0%, 50%);
+
+}
+
+.dropdown-content a:hover {
+  background-color: #008cff;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Mobile menu icon */
+.mobile-menu-icon {
+  display: none;
+  cursor: pointer;
+  font-size: 24px;
+  color: white;
+}
+
+/* Responsive design for mobile */
+@media (max-width: 768px) {
   .nav-links {
-    list-style: none;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  .nav-links li {
-    margin-left: 20px;
-  }
-  
-  .nav-links li a {
-    color: white;
-    text-decoration: none;
-    font-size: 18px;
-  }
-  
-  .nav-links li a:hover {
-    color: #00aaff;
-  }
-  
-  /* Dropdown menu */
-  .dropdown {
-    position: relative;
-    display: inline-block;
-  }
-  
-  .dropdown-content {
     display: none;
+    flex-direction: column;
     position: absolute;
+    top: 60px;
+    right: 0;
+    width: 100%;
     background-color: #333;
-    min-width: 160px;
-    z-index: 1;
+    padding: 10px 0;
   }
-  
-  .dropdown-content a {
-    color: white;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
+
+  .nav-links li {
+    margin: 10px 0;
+    text-align: left;
+    width: 100px;
     border-bottom: 1px solid hsl(0, 0%, 50%);
-  
   }
-  
-  .dropdown-content a:hover {
-    background-color: #00aaff;
-  }
-  
-  .dropdown:hover .dropdown-content {
+
+  .mobile-menu-icon {
     display: block;
   }
-  
-  /* Mobile menu icon */
-  .mobile-menu-icon {
-    display: none;
-    cursor: pointer;
-    font-size: 24px;
-    color: white;
+
+  .nav-links.active {
+    display: flex;
   }
-  
-  /* Responsive design for mobile */
-  @media (max-width: 768px) {
-    .nav-links {
-      display: none;
-      flex-direction: column;
-      position: absolute;
-      top: 60px;
-      right: 0;
-      width: 100%;
-      background-color: #333;
-      padding: 10px 0;
-    }
-  
-    .nav-links li {
-      margin: 10px 0;
-      text-align: left;
-      width: 100px;
-      border-bottom: 1px solid hsl(0, 0%, 50%);
-    }
-  
-    .mobile-menu-icon {
-      display: block;
-    }
-  
-    .nav-links.active {
-      display: flex;
-    }
-  }
+}
 
 /* Hero Section */
 header.hero {
@@ -167,6 +175,7 @@ header.hero {
 .hero-content h1 {
     font-size: 3.5rem;
     margin-bottom: 20px;
+    color: #fff;
 }
 
 .hero-content p {
@@ -185,7 +194,7 @@ header.hero {
 }
 
 .btn:hover {
-    background-color: #45a049;
+    background-color: #004212;
 }
 
 section#learn-more {
@@ -274,13 +283,6 @@ section#get-involved {
     font-size: 1rem;
     color: #666;
     margin-bottom: 20px;
-}
-
-footer {
-    text-align: center;
-    padding: 20px;
-    background-color: #333;
-    color: white;
 }
 
 /* Media Queries */
@@ -390,8 +392,8 @@ footer {
   }
   
   .project-info .button {
-    background-color: var(--primary-green);
-    color: var(--white);
+    background-color: #008cff;
+    color: #fff;
     padding: 10px 20px;
     border-radius: 5px;
     text-decoration: none;
@@ -400,7 +402,7 @@ footer {
   }
   
   .project-info .button:hover {
-    background-color: var(--secondary-blue);
+    background-color:#004212;
   }
 
   /* Media Queries for Smaller Screens */
@@ -415,7 +417,124 @@ footer {
       margin-bottom: 20px;
     }
 }
+/* Footer Section Styles */
+.footer-section {
+  background: linear-gradient(rgb(0, 29, 0), rgb(0, 0, 0));
+  color: var(--white);
+  padding: 20px;
+  margin-top: 0px;
+  text-align: left;
+}
 
-  
+.footer-columns {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.footer-column {
+    flex: 1 1 22%;
+    margin-bottom: 20px;
+}
+
+.footer-column h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.footer-column p, 
+.footer-column ul {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #ccc;
+    margin-bottom: 20px;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 10px;
+}
+
+.footer-column ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-column ul li a:hover {
+    color: #008cff;
+}
+
+/* Social Media Icons */
+.social-icons a {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.social-icons img {
+    width: 30px;
+    height: 30px;
+    transition: transform 0.3s ease;
+}
+
+.social-icons a:hover img {
+    transform: scale(1.4);
+}
+
+/* Footer Bottom */
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #444;
+}
+
+.footer-bottom p {
+    font-size: 0.9rem;
+    color: #aaa;
+}
+
+/* Responsive Design for Footer */
+@media (max-width: 768px) {
+    .footer-columns {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .footer-column {
+        flex: 1 1 100%;
+        margin-bottom: 10px;
+    }
+}
+/* Style for Back to Top Button */
+#backToTopBtn {
+  display: block; /* Hidden by default */
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 100;
+  border: none;
+  outline: none;
+  background-color: transparent; /* No background since it's an image */
+  padding: 0;
+  cursor: pointer;
+}
+
+#backToTopBtn img {
+  width: 40px; /* Adjust the size of the image */
+  height: 40px; /* Adjust the size of the image */
+  transition: transform 0.3s ease;
+}
+
+#backToTopBtn:hover img {
+  transform: scale(1.1); /* Slight zoom effect on hover */
+}
+
 
   
